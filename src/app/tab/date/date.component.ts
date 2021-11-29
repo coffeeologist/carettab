@@ -193,6 +193,18 @@ export class TabDateComponent implements OnInit {
     return this.settings.config.date.short.delimiter;
   }
 
+  getDateSuffix() {
+    return this.settings.config.date.short.dateSuffix;
+  }
+
+  getMonthSuffix() {
+    return this.settings.config.date.short.monthSuffix;
+  }
+
+  getYearSuffix() {
+    return this.settings.config.date.short.yearSuffix;
+  }
+
   getWeekday(): string {
     moment.locale(this.settings.config.i18n.lang);
     let current = this.currentDate;
