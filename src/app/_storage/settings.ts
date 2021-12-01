@@ -234,11 +234,18 @@ export class DateSettings {
       enabled: true,
       abbr: false
     },
+    public ordinalContent = {
+      scaling: 10,
+      offset: 0,
+      delimiter: '/'
+    },
+    public julianDate = {
+      enabled: false,
+      label: "Day",
+    },
     public week = {
       enabled: false,
       label: 'Week',
-      scaling: 10,
-      offset: 0,
       iso: false
     },
   ) {}
