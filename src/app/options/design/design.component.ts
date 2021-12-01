@@ -95,6 +95,13 @@ export class OptionsDesignComponent implements OnInit {
     localStorage.setItem('ct-background', bg);
   }
 
+  toggleDarkMode() {
+    var t = this.settings.config.design.foreground;
+    this.settings.config.design.foreground = this.settings.config.design.background;
+    this.settings.config.design.background = t;
+    this.setLocalBg(t)
+  }
+
   setPattern(p: {id: number, pattern: string}) {
     let bg = './assets/patterns/' + p.pattern;
     this.settings.config.design.patternId = p.id;
