@@ -34,6 +34,8 @@ export class DesignSettings {
     public customFontWeight = 40,
     public background = '#ffffff',
     public foreground = '#000000',
+    public randTheme = false,
+    public darkTheme = false,
     public colorsId = 0,
     public patternId = 0,
     public imageSize = 10,
@@ -194,6 +196,11 @@ export class TimeSettings {
         binary: {
           enabled: false,
           dim: false
+        },
+        dateDiff: {
+          enabled: false,
+          scaling: 10,
+          offset: 0
         }
       }
     ],
@@ -239,13 +246,20 @@ export class DateSettings {
       enabled: true,
       abbr: false
     },
+    public ordinalContent = {
+      scaling: 10,
+      offset: 0,
+      delimiter: '/'
+    },
+    public julianDate = {
+      enabled: false,
+      label: "Day",
+    },
     public week = {
       enabled: false,
       label: 'Week',
-      scaling: 10,
-      offset: 0,
       iso: false
-    },
+    }
   ) {}
 }
 
