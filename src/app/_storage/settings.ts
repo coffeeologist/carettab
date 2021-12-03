@@ -196,6 +196,11 @@ export class TimeSettings {
         binary: {
           enabled: false,
           dim: false
+        },
+        dateDiff: {
+          enabled: false,
+          scaling: 10,
+          offset: 0
         }
       }
     ],
@@ -248,7 +253,7 @@ export class DateSettings {
       enabled: false,
       label: 'Week',
       iso: false
-    },
+    }
   ) {}
 }
 
